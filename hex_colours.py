@@ -4,7 +4,10 @@ color ={"AliceBlue": "#f0f8ff", "AntiqueWhite": "#faebd7", "AntiqueWhite1": "#ff
         "azure1": "#f0ffff", "azure2": "#e0eeee", "azure3": "#c1cdcd",
         "azure4": "#838b8b", "beige": "#f5f5dc", "bisque1": "#ffe4c4"}
 
-name_colour = input("Enter a name of the colour: ")
-while name_colour != "":
+name_colour = input("Enter a name of the colour:(input 0 to exit) ")
+while name_colour != "" or name_colour == "0":
+    if name_colour == "0":
+        print("Thanks for using the program :D")
+        break
     print("The code for \"{}\" is {}".format(name_colour, color.get(name_colour)))
-    name_colour = input("Enter a name of the colour: ")
+    name_colour = input("Enter a name of the colour:(input 0 to exit) ")
